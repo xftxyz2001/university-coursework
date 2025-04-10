@@ -7,28 +7,28 @@ double calculateDeterminant(int n, double a[], double b[], double c[]);
 int main()
 {
     int n;
-    printf("è¯·è¾“å…¥çŸ©é˜µçš„é˜¶æ•°: ");
+    printf("ÇëÊäÈë¾ØÕóµÄ½×Êı: ");
     scanf("%d", &n);
 
     double *a = (double *)malloc((n - 1) * sizeof(double));
     double *b = (double *)malloc(n * sizeof(double));
     double *c = (double *)malloc((n - 1) * sizeof(double));
 
-    printf("è¯·è¾“å…¥ä¸»å¯¹è§’çº¿ä¸Šçš„å…ƒç´ :\n");
+    printf("ÇëÊäÈëÖ÷¶Ô½ÇÏßÉÏµÄÔªËØ:\n");
     for (int i = 0; i < n; i++)
     {
         printf("b[%d] = ", i + 1);
         scanf("%lf", &b[i]);
     }
 
-    printf("è¯·è¾“å…¥ä¸Šå¯¹è§’çº¿ä¸Šçš„å…ƒç´ :\n");
+    printf("ÇëÊäÈëÉÏ¶Ô½ÇÏßÉÏµÄÔªËØ:\n");
     for (int i = 0; i < n - 1; i++)
     {
         printf("a[%d] = ", i + 1);
         scanf("%lf", &a[i]);
     }
 
-    printf("è¯·è¾“å…¥ä¸‹å¯¹è§’çº¿ä¸Šçš„å…ƒç´ :\n");
+    printf("ÇëÊäÈëÏÂ¶Ô½ÇÏßÉÏµÄÔªËØ:\n");
     for (int i = 0; i < n - 1; i++)
     {
         printf("c[%d] = ", i + 1);
@@ -36,7 +36,7 @@ int main()
     }
 
     double det = calculateDeterminant(n, a, b, c);
-    printf("è¯¥ä¸‰å¯¹è§’çŸ©é˜µçš„è¡Œåˆ—å¼çš„å€¼ä¸º: %lf\n", det);
+    printf("¸ÃÈı¶Ô½Ç¾ØÕóµÄĞĞÁĞÊ½µÄÖµÎª: %lf\n", det);
 
     return 0;
 }

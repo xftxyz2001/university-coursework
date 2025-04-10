@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-// å‡½æ•°å£°æ˜
+// º¯ÊıÉùÃ÷
 void inputMatrix(int matrix[3][3]);
 int sumDiagonal(int matrix[3][3]);
 void multiplyMatrices(int A[3][3], int B[3][3], int result[3][3]);
@@ -14,45 +14,45 @@ int main(int argc, char const *argv[])
     int matrix2[3][3];
     int result[3][3] = {0};
 
-    printf("è¯·è¾“å…¥ç¬¬ä¸€ä¸ª3x3çŸ©é˜µ:\n");
+    printf("ÇëÊäÈëµÚÒ»¸ö3x3¾ØÕó:\n");
     inputMatrix(matrix1);
 
-    printf("è¯·è¾“å…¥ç¬¬äºŒä¸ª3x3çŸ©é˜µ:\n");
+    printf("ÇëÊäÈëµÚ¶ş¸ö3x3¾ØÕó:\n");
     inputMatrix(matrix2);
 
-    // è®¡ç®—ç¬¬ä¸€ä¸ªçŸ©é˜µçš„å¯¹è§’çº¿å…ƒç´ ä¹‹å’Œ
+    // ¼ÆËãµÚÒ»¸ö¾ØÕóµÄ¶Ô½ÇÏßÔªËØÖ®ºÍ
     int diagonalSum = sumDiagonal(matrix1);
-    printf("ç¬¬ä¸€ä¸ªçŸ©é˜µçš„å¯¹è§’çº¿å…ƒç´ ä¹‹å’Œ: %d\n", diagonalSum);
+    printf("µÚÒ»¸ö¾ØÕóµÄ¶Ô½ÇÏßÔªËØÖ®ºÍ: %d\n", diagonalSum);
 
-    // æ£€æŸ¥çŸ©é˜µæ˜¯å¦å¯ä»¥ç›¸ä¹˜
+    // ¼ì²é¾ØÕóÊÇ·ñ¿ÉÒÔÏà³Ë
     if (sizeof(matrix1[0]) / sizeof(matrix1[0][0]) == sizeof(matrix2) / sizeof(matrix2[0]))
     {
         multiplyMatrices(matrix1, matrix2, result);
-        printf("çŸ©é˜µç›¸ä¹˜ç»“æœ:\n");
+        printf("¾ØÕóÏà³Ë½á¹û:\n");
         printMatrix(result);
     }
     else
     {
-        printf("çŸ©é˜µæ— æ³•ç›¸ä¹˜ï¼Œå› ä¸ºç¬¬ä¸€ä¸ªçŸ©é˜µçš„åˆ—æ•°ä¸ç­‰äºç¬¬äºŒä¸ªçŸ©é˜µçš„è¡Œæ•°ã€‚\n");
+        printf("¾ØÕóÎŞ·¨Ïà³Ë£¬ÒòÎªµÚÒ»¸ö¾ØÕóµÄÁĞÊı²»µÈÓÚµÚ¶ş¸ö¾ØÕóµÄĞĞÊı¡£\n");
     }
 
     return 0;
 }
 
-// è¾“å…¥ä¸€ä¸ª3x3çŸ©é˜µ
+// ÊäÈëÒ»¸ö3x3¾ØÕó
 void inputMatrix(int matrix[3][3])
 {
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("è¾“å…¥ç¬¬%dè¡Œç¬¬%dåˆ—çš„å…ƒç´ : ", i + 1, j + 1);
+            printf("ÊäÈëµÚ%dĞĞµÚ%dÁĞµÄÔªËØ: ", i + 1, j + 1);
             scanf("%d", &matrix[i][j]);
         }
     }
 }
 
-// è®¡ç®—3x3çŸ©é˜µå¯¹è§’çº¿å…ƒç´ ä¹‹å’Œ
+// ¼ÆËã3x3¾ØÕó¶Ô½ÇÏßÔªËØÖ®ºÍ
 int sumDiagonal(int matrix[3][3])
 {
     int sum = 0;
@@ -63,7 +63,7 @@ int sumDiagonal(int matrix[3][3])
     return sum;
 }
 
-// çŸ©é˜µç›¸ä¹˜
+// ¾ØÕóÏà³Ë
 void multiplyMatrices(int A[3][3], int B[3][3], int result[3][3])
 {
     for (int i = 0; i < 3; i++)
@@ -79,7 +79,7 @@ void multiplyMatrices(int A[3][3], int B[3][3], int result[3][3])
     }
 }
 
-// æ‰“å°çŸ©é˜µ
+// ´òÓ¡¾ØÕó
 void printMatrix(int matrix[3][3])
 {
     for (int i = 0; i < 3; i++)
