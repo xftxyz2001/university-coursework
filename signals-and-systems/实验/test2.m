@@ -1,26 +1,26 @@
 % 1. 单位阶跃信号
-syms x 
+syms x
 fplot(heaviside(x), [-2, 2]);
 
 % 2. 采样函数
-t= -10:1/500:10; 
-x=sinc(t/pi); 
-plot(t,x); 
-title('Sa函数信号'); 
-xlabel('时间(t)'); 
+t= -10:1/500:10;
+x=sinc(t/pi);
+plot(t,x);
+title('Sa函数信号');
+xlabel('时间(t)');
 ylabel('幅值(f)');
 
 % 3. 门函数
-width=2; % 设置宽度 
-t=-2:0.001:3; % 横坐标的取值 
-ft=rectpuls(t,width); % 调用格式为rectpuls(x,y) 
-plot(t,ft); 
-grid on; % 显示网格 
+width=2; % 设置宽度
+t=-2:0.001:3; % 横坐标的取值
+ft=rectpuls(t,width); % 调用格式为rectpuls(x,y)
+plot(t,ft);
+grid on; % 显示网格
 ylim([-0.5 1.5]); % ylim(limits) 设置当前坐标区或图的y
 
 % 4. 三角脉冲
-x=-10:0.001:10
-y=tripuls(x,5)
+x=-10:0.001:10;
+y=tripuls(x,5);
 plot(x,y)
 xlim([-10.7 11.3])
 ylim([0.01 1.11])
@@ -45,17 +45,17 @@ grid on
 
 % 2、利用matlab编程实现如下图所示信号f(t)的变化：f(-t)、f(t+2)、f(-t+2)和f(2-2t)，画出相应图形。
 clear
-t0=-5:0.01:5;                         
-t=t0;                                        
-ft=(-t-1).*(heaviside(t+1)-heaviside(t))-(heaviside(t)-heaviside(t-1))+(heaviside(t-1)-heaviside(t-2)); 
+t0=-5:0.01:5;
+t=t0;
+ft=(-t-1).*(heaviside(t+1)-heaviside(t))-(heaviside(t)-heaviside(t-1))+(heaviside(t-1)-heaviside(t-2));
 figure(1)
 subplot(1,1,1)
 plot(t0,ft)
 xlabel('t');
 ylabel('f(t)');
 
-t1=-t;                   
-t=t1;                     
+t1=-t;
+t=t1;
 ft=(-t-1).*(heaviside(t+1)-heaviside(t))-(heaviside(t)-heaviside(t-1))+(heaviside(t-1)-heaviside(t-2));
 figure(2);
 subplot(2,2,1)

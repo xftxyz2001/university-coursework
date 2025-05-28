@@ -55,4 +55,4 @@ disp(vpa(sum_expr, 6));  % 显示6位有效数字
 
 % 7. 求 exp(x) 的泰勒展开
 syms x
-taylor(exp(x));
+disp(taylor(exp(x)))
